@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default">
+
+        <img class="col-sm-4 col-sm-offset-4" src="./images/logo2.png" alt="">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/list.php">Liste commandes</a></li>
+        </ul>
+    </nav>
+    <div class="buche">
+    </div>
+</header>
+<form action="./newcommande.php" method="post">
+    <section class="haut row">
+        <div class="gauche col-sm-6">
+            <img src="./images/logo.png" class="pizzaiolo">
+            <br>
+
+            <br>
+            <h1>WikiCoda</h1>
+        </div>
+
+        <div class="droite col-sm-6 orange">
+            <h2>COMMANDER</h2>
+            <p class="remplie">Remplir le formulaire...</p>
+
+            <div class="formulaire form-group">
+                <input class="form-control" type="text" name="nom" id="nom" placeholder="Nom">
+                <input class="form-control" type="text" name="telephone" id="telephone" placeholder="Telephone">
+                <input class="form-control" type="text" name="adresse" id="adresse" placeholder="Adresse">
+            </div>
+            <p class="remplie">Et choissisez vos pizzas et valider la commande!</p>
+        </div>
+    </section>
+
+    <section class="pizza container">
+        <div class="row">
+
+            <div class="col-sm-3 pizza_unit thumbnail">
+                <img src="./images/order1.png" alt="">
+                <p>4 FRAMEWORKS<span>12€</span></p>
+                <div class="quantity">
+                    <label for="nb_pizza1">Quantité</label>
+                    <input type="number" id="nb_pizza1" value="0" name="nb_pizza1">
+                </div>
+            </div>
+
+            <div class="col-sm-3 pizza_unit thumbnail" >
+                <img src="./images/order2.png" alt="">
+                <p>GIT PUSH PIZZA<span>10€</span></p>
+                <div class="quantity">
+                    <label for="nb_pizza2">Quantité</label>
+                    <input type="number" id="nb_pizza2" value="0" name="nb_pizza2">
+                </div>
+            </div>
+
+            [3:03]
+            <div class="col-sm-3 pizza_unit thumbnail" >
+                <img src="./images/order3.png" alt="">
+                <p>BEAUTIFUL CSS<span>9€</span></p>
+                <div class="quantity">
+                    <label for="nb_pizza3">Quantité</label>
+                    <input type="number" id="nb_pizza3" value="0" name="nb_pizza3">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3 pizza_unit thumbnail" >
+                <img src="./images/order4.png" alt="">
+                <p>JQUERY UI<span>11€</span></p>
+                <div class="quantity">
+                    <label for="nb_pizza4">Quantité</label>
+                    <input type="number" id="nb_pizza4" value="0" name="nb_pizza4">
+                </div>
+            </div>
+            <div class="col-sm-3 pizza_unit thumbnail" >
+                <img src="./images/order5.png" alt="">
+                <p>LA BOOTSTRAP<span>9€</span></p>
+                <div class="quantity">
+                    <label for="nb_pizza5">Quantité</label>
+                    <input type="number" id="nb_pizza5" value="0" name="nb_pizza5">
+                </div>
+            </div>
+            <div class="col-sm-3 pizza_unit thumbnail" >
+                <img src="./images/order6.png" alt="">
+                <p>L'HTML AU SEO<span>8€</span></p>
+                <div class="quantity">
+                    <label for="nb_pizza6">Quantité</label>
+                    <input type="number" id="nb_pizza6" value="0" name="nb_pizza6">
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <input type="submit" value="VALIDER LA COMMANDE" id="validation-commande">
+</form>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./js/script.js"></script>
+
+</body>
+</html>

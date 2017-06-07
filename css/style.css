@@ -1,0 +1,124 @@
+.img-responsive {
+
+    margin: 0 auto;
+
+}
+*
+{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+h1{
+    font-family: 'Fredericka the Great', cursive;
+    color: white;
+}
+
+.pizza_unit img {
+    width: 50%;
+    height: auto;
+    margin-top: 5px;
+}
+
+.pizza_unit{
+    background-image: url("../images/bg1.jpeg");
+    border: none;
+    box-shadow: 3px 3px 3px black;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-content:space-between;
+    align-items: center;
+}
+
+.pizza_unit:nth-child(2) {
+    margin: 0 3vw;
+}
+.pizzaiolo{
+    position: relative;
+    margin-top: -100px;
+}
+
+.orange{
+    background-color: #f46534 ;
+    background-image: url("../images/frise.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:0 -20px;
+    box-shadow:3px 6px 3px  black;
+
+}
+h2{
+    font-size: 30px;
+}
+body {
+    background-image: url("../images/bg2.jpg");
+}
+.buche {
+    height: 2em;
+    background-image: url("../images/bg_top.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.form-control{
+    margin-top: 10px;
+    background-image: url("../images/bg1.jpeg");
+    border: none;
+    border-radius: 0;
+}
+#adresse{
+    height: 70px;
+}
+
+.navbar {
+    margin: inherit;
+}
+.pizza {
+    width: 60%;
+    color: white;
+    margin-top: 10px;
+}
+h2{
+    font-family: 'Fredericka the Great', cursive;
+    color: White;
+    text-align: center;
+}
+
+.remplie{
+    text-align: center;
+}
+
+.quantity input {
+    width: 40px;
+    background-color: transparent;
+    border: 1px solid #F46534 ;
+    padding: 4px;
+    color: #F46534 ;
+}
+
+.quantity label {
+    padding: 5px;
+    background-color: #F46534 ;
+    color: black;
+    font-size: 12px;
+    font-weight: normal;
+    margin-right: 5px;
+}
+
+.quantity{
+    margin-top: 5px;
+}
+.pizza_unit p {
+    margin-top: 10px;
+}
+
+p span {
+    border: 1px solid #F46534 ;
+    padding: 3px 5px;
+    text-align: center;
+    margin-left: 3px;
+    color: #F46534 ;
+    font-size: 12px;
+}
+
+#validation-commande{
+    background-color: green;
+}
