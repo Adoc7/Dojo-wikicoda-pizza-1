@@ -6,6 +6,15 @@
  * Time: 15:30
  */
 
+$bdd= new PDO('mysql:host=localhost;dbname=pizza','root', 'root');
+
+$requete = $bdd->prepare("SELECT * FROM commandes");
+
+$requete->execute();
+
+$commands = $requete->fetchAll();
+
+
 
 ?>
 
@@ -32,6 +41,77 @@
     </div>
 </header>
     <section class="pizza container">
+
+<div class="commandes">
+    <?php
+    foreach ($commands as $command) {
+    ?>
+        <hr>
+        <p>Commandé le :<?=$command['date']?></p>
+        <p>Nom : <?=$command['nom']?></p>
+        <p>Téléphone : <?=$command['tel']?></p>
+        <p>Adresse : <?=$command['adresse']?></p>
+        <p>Commmande : <?php
+           $commandedpizza="";
+           //creer un compteur prix total
+            $totalprice =0;
+
+
+           if( $command["fourframeworks"]>0) {
+               $commandedpizza.=$command["fourframeworks"]." 4 Framework, ";
+               // on ajoute au prix total le prix particulier de la pizza muliplié par le nombre de pizza comande
+               $totalprice = $totalprice +12* $command["fourframeworks"];
+           }
+
+            if( $command["gitpushpizza"]>0) {
+                $commandedpizza.=$command["gitpushpizza"]." Git Push Pizza, ";
+                $totalprice = $totalprice +10* $command["gitpushpizza"];
+            }
+            if( $command["beautifulcss"]>0) {
+                $commandedpizza.=$command["beautifulcss"]." BEAUTIFUL CSS, ";
+                $totalprice = $totalprice + 9* $command["beautifulcss"];
+
+            }
+            if( $command["jqueryui"]>0) {
+                $commandedpizza.=$command["jqueryui"]." JQUERY UI, ";
+                $totalprice = $totalprice +11* $command["jqueryui"];
+            }
+            if( $command["labootstrap"]>0) {
+                $commandedpizza.=$command["labootstrap"]." LA BOOTSTRAP, ";
+                $totalprice = $totalprice +9* $command["labootstrap"];
+            }
+
+            if( $command["lhtmlauseo"]>0) {
+                $commandedpizza.=$command["lhtmlauseo"]." L HTMLAUSEO, ";
+                $totalprice = $totalprice +8* $command["lhtmlauseo"];
+            }
+
+
+       //         $commandedpizza = substr_replace($commandedpizza,".",-2);
+
+            $commandedpizza = preg_replace('#, $#', '.',$commandedpizza);
+            $commandedpizza = preg_replace('#\d#', 'super',$commandedpizza);
+//
+//               $commandedpizza = substr($commandedpizza, 0, -2). ".";
+//
+
+             echo $commandedpizza;
+
+            //écriredans le html le prix total
+
+            ?></p>
+        <p>Prix total : <?=$totalprice?>€</p>
+
+
+    <?php }
+    ?>
+
+
+</div>
+
+
+
+
 
     </section>
 <!-- Latest compiled and minified JavaScript -->

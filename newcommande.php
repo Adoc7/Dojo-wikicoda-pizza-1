@@ -46,3 +46,5 @@ $requete->bindParam(':lhtmlauseo', $lhtmlauseo);
 // on execute la requete
 
 $requete->execute();
+
+header('Location: list.php');
