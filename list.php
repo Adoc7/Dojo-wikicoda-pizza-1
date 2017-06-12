@@ -6,13 +6,27 @@
  * Time: 15:30
  */
 
-$bdd= new PDO('mysql:host=localhost;dbname=pizza','root', 'root');
+
+$bdd= new PDO('mysql:host=localhost;dbname=PizzaCoda','root', 'coda');
+
+/* Requete de connexion à la base de donnée ( BDD ) ( PDO : "PHP Data Object",nous entrons la localisation de notre BDD
+ici " Localhost ", le name de notre tableau ici " dbname", le nom d'utilisateur et le mot de passe du SQL lié à notre host ) */
 
 $requete = $bdd->prepare("SELECT * FROM commandes");
 
+/* Ici nous créons une variable appelée " $requete ", qui a pour but de préparer une requête à l'execution et retourne un objet.
+Ensuite, nous utilisons la requete " SELECT " avec * ( qui nous permet de tout selectioner dans le tableau ( Avec la requete " FROM " qui
+dirige vers les commandes )) */
+
 $requete->execute();
 
+// On demande d'éxécuter la requête écrite ci-dessus, à savoir "prepare "
+
 $commands = $requete->fetchAll();
+
+/* permet de nous transmettre lensemble des donnèes que nous avons demandé sous forme de tableau ( prendre toute ce qu'on à demandé
+pour l'afficher sous forme de tableau ) */
+
 
 
 
@@ -43,9 +57,15 @@ $commands = $requete->fetchAll();
     <section class="pizza container">
 
 <div class="commandes">
+
+
     <?php
+    // on commence notre  boucle ici
+
     foreach ($commands as $command) {
-    ?>
+//    ?>
+
+        <!-- ici on appel nos variables avec du html -->
         <hr>
         <p>Commandé le :<?=$command['date']?></p>
         <p>Nom : <?=$command['nom']?></p>
@@ -53,7 +73,7 @@ $commands = $requete->fetchAll();
         <p>Adresse : <?=$command['adresse']?></p>
         <p>Commmande : <?php
            $commandedpizza="";
-           //creer un compteur prix total
+//           //creer un compteur prix total
             $totalprice =0;
 
 
