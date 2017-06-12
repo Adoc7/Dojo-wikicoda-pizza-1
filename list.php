@@ -90,7 +90,6 @@ $commands = $requete->fetchAll();
        //         $commandedpizza = substr_replace($commandedpizza,".",-2);
 
             $commandedpizza = preg_replace('#, $#', '.',$commandedpizza);
-            $commandedpizza = preg_replace('#\d#', 'super',$commandedpizza);
 //
 //               $commandedpizza = substr($commandedpizza, 0, -2). ".";
 //
